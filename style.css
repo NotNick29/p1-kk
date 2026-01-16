@@ -55,3 +55,47 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary:hover {
     transform: scale(1.05); /* Slight zoom on hover */
 }
+/* --- LAYOUT UTILITIES --- */
+.container {
+    max-width: 1200px; /* Standard width for laptops */
+    margin: 0 auto;    /* Centers the container in the middle of the screen */
+    padding: 0 24px;   /* Adds breathing room on the sides */
+    width: 100%;
+}
+
+/* --- NAVBAR STYLING --- */
+.navbar {
+    background-color: var(--white);
+    padding: 20px 0;   /* Vertical spacing */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Subtle shadow so it pops */
+}
+
+.navbar .container {
+    display: flex;     /* Makes items sit in a row */
+    justify-content: space-between; /* Spreads them out (Logo - Links - Button) */
+    align-items: center; /* Vertically centers them */
+}
+
+/* Logo Style */
+.logo {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+/* Links Style */
+.nav-links {
+    display: flex;
+    gap: 40px; /* Space between "Home" and "Services" */
+}
+
+.nav-links a {
+    text-decoration: none; /* Removes the underline */
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color); /* Turns teal when you mouse over */
+}
