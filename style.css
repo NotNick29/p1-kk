@@ -18,6 +18,10 @@
     --body-font: 'Inter', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* GLOBAL RESET */
 * {
     margin: 0;
@@ -162,4 +166,53 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-glass:hover {
     background: rgba(255, 255, 255, 0.2);
+}
+/* --- ABOUT SECTION --- */
+.about-section {
+    padding: 120px 0;
+    background-color: #F8F9FA; /* Very light grey background */
+}
+
+.about-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 80px auto; /* Centers text and adds space below */
+}
+
+.about-header h2 {
+    font-size: 3rem;
+    margin-bottom: 24px;
+    font-family: var(--heading-font);
+}
+
+.mission-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* The Grid for "Innovation" & "Values" */
+.values-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 60px;
+    align-items: start;
+}
+
+.value-box h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+/* Makes the words "Innovation" and "Values" pop */
+.highlight {
+    font-family: var(--body-font);
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+.value-items p {
+    margin-bottom: 12px;
 }
