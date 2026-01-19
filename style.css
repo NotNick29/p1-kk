@@ -35,6 +35,17 @@ body {
     line-height: 1.6;
 }
 
+/* Update or Add this HEADER rule */
+.navbar {
+    position: absolute; /* Takes it out of the layout flow so it floats */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* No more white box */
+    z-index: 10; /* Ensures it sits ON TOP of the image */
+    padding: 20px 0; /* Keeps some spacing */
+}
+
 /* Typography Rules */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
@@ -68,11 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --- NAVBAR STYLING --- */
-.navbar {
-    background-color: var(--white);
-    padding: 20px 0;   /* Vertical spacing */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Subtle shadow so it pops */
-}
+
 
 .navbar .container {
     display: flex;     /* Makes items sit in a row */
@@ -84,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 .logo {
     font-family: var(--heading-font);
     font-size: 1.5rem;
-    color: var(--secondary-color);
+    color: var(--white);
 }
 
 /* Links Style */
@@ -95,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-links a {
     text-decoration: none; /* Removes the underline */
-    color: var(--text-color);
+    color: var(--white);
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -107,7 +114,23 @@ h1, h2, h3, h4, h5, h6 {
 .hero {
     /* TODO: Once you have the image, uncomment the line below and add your file path */
     /* background-image: url('assets/images/hero-bg.jpg'); */
-    background-color: #2D3E50; /* Temporary Dark Blue placeholder */
+   
+    /* Updated Path: Since style.css is in the main folder, 
+       we go directly into 'assets/images/' 
+    */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Keep the layout rules */
+    height: 80vh;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 60px;
+    color: var(--white);
+    position: relative;
+
     background-size: cover;
     background-position: center;
     height: 80vh; /* Takes up 80% of the screen height */
@@ -212,6 +235,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     color: var(--text-color);
 }
+
 
 .value-items p {
     margin-bottom: 12px;
