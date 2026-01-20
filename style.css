@@ -36,15 +36,7 @@ body {
 }
 
 /* Update or Add this HEADER rule */
-.navbar {
-    position: absolute; /* Takes it out of the layout flow so it floats */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: transparent; /* No more white box */
-    z-index: 10; /* Ensures it sits ON TOP of the image */
-    padding: 20px 0; /* Keeps some spacing */
-}
+
 
 /* Typography Rules */
 h1, h2, h3, h4, h5, h6 {
@@ -81,34 +73,44 @@ h1, h2, h3, h4, h5, h6 {
 /* --- NAVBAR STYLING --- */
 
 
-.navbar .container {
-    display: flex;     /* Makes items sit in a row */
-    justify-content: space-between; /* Spreads them out (Logo - Links - Button) */
-    align-items: center; /* Vertically centers them */
+/* --- SIMPLE CENTERED NAVBAR --- */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 100;
+    background: transparent;
 }
 
-/* Logo Style */
+/* This targets the container inside the navbar */
+.navbar .container {
+    display: flex;
+    justify-content: space-between; /* This PUSHES them apart (Left & Right) */
+    align-items: center;
+}
+
 .logo {
     font-family: var(--heading-font);
     font-size: 1.5rem;
     color: var(--white);
+    font-weight: bold;
 }
 
-/* Links Style */
 .nav-links {
     display: flex;
-    gap: 40px; /* Space between "Home" and "Services" */
+    gap: 30px;
 }
 
 .nav-links a {
-    text-decoration: none; /* Removes the underline */
+    text-decoration: none;
     color: var(--white);
+    font-size: 1rem;
     font-weight: 500;
-    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: var(--primary-color); /* Turns teal when you mouse over */
+    color: var(--primary-color);
 }
 /* --- HERO SECTION --- */
 .hero {
