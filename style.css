@@ -1,8 +1,8 @@
 /* style.css */
 
 /* 1. IMPORT FONTS */
-/* Importing 'Limelight' for headings and 'Inter' as a clean default for body text */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Limelight&display=swap');
+/* Now fetching 'Limelight' and 'Montserrat' */
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
     /* 2. COLORS */
@@ -15,7 +15,7 @@
     
     /* 3. FONTS */
     --heading-font: 'Limelight', cursive; /* Validated from your screenshot */
-    --body-font: 'Inter', sans-serif;
+    --body-font: 'Montserrat', sans-serif;
 }
 
 html {
@@ -193,54 +193,87 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(255, 255, 255, 0.2);
 }
 /* --- ABOUT SECTION --- */
+/* --- ABOUT SECTION (MAGAZINE LAYOUT) --- */
 .about-section {
-    padding: 120px 0;
-    background-color: #F8F9FA; /* Very light grey background */
+    padding: 100px 0;
+    background-color: #eaeff2; /* Light grey-blue from image */
 }
 
-.about-header {
+/* 1. Huge Title Centered */
+.about-title {
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto 80px auto; /* Centers text and adds space below */
+    font-size: 4rem; /* Very big */
+    margin-bottom: 60px;
+    color: var(--secondary-color);
 }
 
-.about-header h2 {
-    font-size: 3rem;
-    margin-bottom: 24px;
-    font-family: var(--heading-font);
-}
-
-.mission-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-color);
-    opacity: 0.8;
-}
-
-/* The Grid for "Innovation" & "Values" */
-.values-grid {
+/* 2. Main Grid: Left (Mission) vs Right (Values) */
+.about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 60px;
+    grid-template-columns: 1fr 1.5fr; /* Right side is wider */
+    gap: 80px; /* Big space between columns */
     align-items: start;
 }
 
-.value-box h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    font-weight: 400;
+/* Left Column Styling */
+.mission-col p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
 }
 
-/* Makes the words "Innovation" and "Values" pop */
-.highlight {
-    font-family: var(--body-font);
-    font-weight: 300;
-    color: var(--text-color);
+/* 3. The Right Side "Puzzle" */
+.values-col {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
+/* Top Row: Innovation & "Values" */
+.values-row-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
-.value-items p {
-    margin-bottom: 12px;
+.innovation-text {
+    max-width: 60%;
+}
+
+.innovation-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.light-text {
+    font-weight: 300; /* Makes "Innovation" thinner */
+}
+
+.big-word {
+    font-family: var(--heading-font);
+    font-size: 3.5rem;
+    line-height: 1;
+    color: var(--secondary-color);
+}
+
+/* Bottom Row: Integrity, Core, Comfort */
+.values-row-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.big-word-center {
+    font-family: var(--heading-font);
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+    margin: 0 20px;
+}
+
+.small-val {
+    font-size: 0.9rem;
+    max-width: 150px;
+    line-height: 1.4;
 }
 /* --- WHY CHOOSE US SECTION --- */
 .choose-section {
@@ -280,7 +313,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.95rem;
     color: #555;
     line-height: 1.5;
-}
+}+
 
 /* 2. Bento Grid Layout */
 .bento-grid {
