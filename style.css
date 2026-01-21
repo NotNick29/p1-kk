@@ -37,13 +37,27 @@ body {
 
 /* Update or Add this HEADER rule */
 
+/* --- TYPOGRAPHY FIX --- */
 
-/* Typography Rules */
+/* 1. Only use Limelight for the BIG Hero Title and the Logo */
+.hero-title, .logo {
+    font-family: var(--heading-font); /* Limelight */
+    font-weight: 400;
+}
+
+/* 2. Use Montserrat for Section Titles (About Us, Why Choose Us, etc.) */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
-    color: var(--secondary-color); /* Usually dark navy/black */
+    font-family: var(--body-font); /* Montserrat */
+    font-weight: 500; /* Makes it look clean and modern */
+    color: var(--secondary-color);
     margin-bottom: 1rem;
-    font-weight: 400; /* Limelight is thick by default */
+}
+
+/* 3. Specific fix for the "About Us" big title to look thin and large */
+.about-title {
+    font-family: var(--body-font); /* Montserrat */
+    font-weight: 400; /* Thinner */
+    font-size: 3.5rem; /* Big */
 }
 
 /* Button Standard */
@@ -192,89 +206,95 @@ h1, h2, h3, h4, h5, h6 {
 .btn-glass:hover {
     background: rgba(255, 255, 255, 0.2);
 }
-/* --- ABOUT SECTION --- */
-/* --- ABOUT SECTION (MAGAZINE LAYOUT) --- */
+/* --- ABOUT SECTION (MAGAZINE LAYOUT FIX) --- */
 .about-section {
     padding: 100px 0;
-    background-color: #eaeff2; /* Light grey-blue from image */
+    background-color: #eaeff2; /* Light grey-blue */
 }
 
-/* 1. Huge Title Centered */
 .about-title {
     text-align: center;
-    font-size: 4rem; /* Very big */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Regular weight */
+    font-size: 3.5rem;
     margin-bottom: 60px;
     color: var(--secondary-color);
 }
 
-/* 2. Main Grid: Left (Mission) vs Right (Values) */
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr; /* Right side is wider */
-    gap: 80px; /* Big space between columns */
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
     align-items: start;
 }
 
-/* Left Column Styling */
 .mission-col p {
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.1rem;
     line-height: 1.8;
     color: #444;
 }
 
-/* 3. The Right Side "Puzzle" */
+/* RIGHT COLUMN LAYOUT */
 .values-col {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 50px; /* Space between top and bottom rows */
 }
 
-/* Top Row: Innovation & "Values" */
+/* --- TOP ROW --- */
 .values-row-top {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    align-items: center; /* Vertically center everything */
+    justify-content: space-between; /* Spread them out */
+}
+
+/* The Big Words (Our, Values, Core) */
+.big-word-left, 
+.big-word-right, 
+.big-word-center {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Made thicker (Regular) to match image */
+    font-size: 3rem;  /* Large size */
+    color: var(--secondary-color);
+    line-height: 1;
 }
 
 .innovation-text {
-    max-width: 60%;
+    flex: 1; /* Takes up middle space */
+    padding: 0 20px; /* Space on sides */
 }
 
-.innovation-text h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+.innovation-text h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 5px;
 }
 
-.light-text {
-    font-weight: 300; /* Makes "Innovation" thinner */
+.innovation-text p {
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
-.big-word {
-    font-family: var(--heading-font);
-    font-size: 3.5rem;
-    line-height: 1;
-    color: var(--secondary-color);
-}
-
-/* Bottom Row: Integrity, Core, Comfort */
+/* --- BOTTOM ROW --- */
 .values-row-bottom {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-.big-word-center {
-    font-family: var(--heading-font);
-    font-size: 3.5rem;
-    color: var(--secondary-color);
-    margin: 0 20px;
+    justify-content: space-between;
 }
 
 .small-val {
     font-size: 0.9rem;
-    max-width: 150px;
+    max-width: 200px;
     line-height: 1.4;
+    font-family: 'Montserrat', sans-serif;
 }
+
+/* Alignment Helpers */
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
 /* --- WHY CHOOSE US SECTION --- */
 .choose-section {
     padding: 80px 0;
@@ -313,7 +333,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.95rem;
     color: #555;
     line-height: 1.5;
-}+
+}
 
 /* 2. Bento Grid Layout */
 .bento-grid {
