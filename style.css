@@ -509,3 +509,48 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color); /* Teal dot */
     font-weight: bold;
 }
+/* --- SCROLL BUTTONS --- */
+.scroll-container-wrapper {
+    position: relative; /* Keeps the buttons inside this area */
+    display: flex;
+    align-items: center;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centers button vertically */
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Makes it a perfect circle */
+    
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    z-index: 10;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.scroll-btn:hover {
+    background-color: var(--primary-color); /* Turns Teal on hover */
+    color: #fff;
+    transform: translateY(-50%) scale(1.1); /* Slight pop effect */
+}
+
+/* Position Left and Right */
+.left-btn { left: -25px; }  /* Hangs slightly off the left edge */
+.right-btn { right: -25px; } /* Hangs slightly off the right edge */
+
+/* Hide buttons on mobile (since they can just swipe) */
+@media (max-width: 768px) {
+    .scroll-btn { display: none; }
+}

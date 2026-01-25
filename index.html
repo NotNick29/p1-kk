@@ -124,69 +124,89 @@
             <h2>Our Specialized Services</h2>
         </div>
 
-        <div class="services-scroll-wrapper">
-            
-            <div class="service-card">
-                <div class="card-image">
-                    <img src="https://placehold.co/400x250/png?text=Implants" alt="Dental Implants">
-                </div>
-                <div class="card-content">
-                    <h3>Dental Implants & Restorations</h3>
-                    <p class="service-intro">Restore your confidence and chewing function with permanent, natural-looking tooth replacements.</p>
-                    <ul class="service-list">
-                        <li>Single & Multiple Implants: Using titanium posts.</li>
-                        <li>All-on-4® / All-on-6: Full-arch restoration.</li>
-                        <li>Digital Surgical Guides: 100% precise.</li>
-                    </ul>
-                </div>
-            </div>
+<div class="scroll-container-wrapper">
+    
+    <button class="scroll-btn left-btn" onclick="scrollLeftSides()">&#10094;</button>
 
-            <div class="service-card">
-                <div class="card-image">
-                    <img src="https://placehold.co/400x250/png?text=Cosmetic" alt="Cosmetic Dentistry">
-                </div>
-                <div class="card-content">
-                    <h3>Cosmetic Dentistry</h3>
-                    <p class="service-intro">Because a confident smile can change your life.</p>
-                    <ul class="service-list">
-                        <li>Professional Teeth Whitening: 8 shades brighter.</li>
-                        <li>Porcelain Veneers: Ultra-thin custom shells.</li>
-                        <li>Bonding & Contouring: Quick fixes.</li>
-                    </ul>
-                </div>
+    <div class="services-scroll-wrapper" id="scrollContainer">
+        
+        <div class="service-card">
+            <div class="card-image">
+                <img src="https://placehold.co/400x250/png?text=Implants" alt="Dental Implants">
             </div>
-
-            <div class="service-card">
-                <div class="card-image">
-                    <img src="https://placehold.co/400x250/png?text=Orthodontics" alt="Orthodontics">
-                </div>
-                <div class="card-content">
-                    <h3>Orthodontics</h3>
-                    <p class="service-intro">Perfectly aligned teeth aren't just for aesthetics—they are easier to clean.</p>
-                    <ul class="service-list">
-                        <li>Invisalign® Clear Aligners.</li>
-                        <li>Modern Braces: Ceramic or metal options.</li>
-                        <li>Retainers & Post-Care: Ensuring stability.</li>
-                    </ul>
-                </div>
+            <div class="card-content">
+                <h3>Dental Implants & Restorations</h3>
+                <p class="service-intro">Restore your confidence with permanent tooth replacements.</p>
+                <ul class="service-list">
+                    <li>Single & Multiple Implants.</li>
+                    <li>All-on-4® / All-on-6.</li>
+                    <li>Digital Surgical Guides.</li>
+                </ul>
             </div>
-
-            <div class="service-card">
-                <div class="card-image">
-                    <img src="https://placehold.co/400x250/png?text=General+Care" alt="General Care">
-                </div>
-                <div class="card-content">
-                    <h3>Preventive & General Care</h3>
-                    <p class="service-intro">The foundation of a healthy life starts with prevention.</p>
-                    <ul class="service-list">
-                        <li>Deep Cleaning & AirFlow.</li>
-                        <li>Pain-Free Fillings: Biocompatible materials.</li>
-                        <li>Gum Health (Periodontics).</li>
-                    </ul>
-                </div>
-            </div>
-
         </div>
+
+        <div class="service-card">
+            <div class="card-image">
+                <img src="https://placehold.co/400x250/png?text=Cosmetic" alt="Cosmetic">
+            </div>
+            <div class="card-content">
+                <h3>Cosmetic Dentistry</h3>
+                <p class="service-intro">Because a confident smile can change your life.</p>
+                <ul class="service-list">
+                    <li>Professional Teeth Whitening.</li>
+                    <li>Porcelain Veneers.</li>
+                    <li>Bonding & Contouring.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="card-image">
+                <img src="https://placehold.co/400x250/png?text=Orthodontics" alt="Orthodontics">
+            </div>
+            <div class="card-content">
+                <h3>Orthodontics</h3>
+                <p class="service-intro">Perfectly aligned teeth are easier to clean.</p>
+                <ul class="service-list">
+                    <li>Invisalign® Clear Aligners.</li>
+                    <li>Modern Braces.</li>
+                    <li>Retainers & Post-Care.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="card-image">
+                <img src="https://placehold.co/400x250/png?text=General+Care" alt="General Care">
+            </div>
+            <div class="card-content">
+                <h3>Preventive & General Care</h3>
+                <p class="service-intro">The foundation of a healthy life starts with prevention.</p>
+                <ul class="service-list">
+                    <li>Deep Cleaning & AirFlow.</li>
+                    <li>Pain-Free Fillings.</li>
+                    <li>Gum Health.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="scroll-btn right-btn" onclick="scrollRightSides()">&#10095;</button>
+
+</div>
     </div>
 </section>
+<script>
+    function scrollRightSides() {
+        const container = document.getElementById('scrollContainer');
+        container.scrollBy({ left: 350, behavior: 'smooth' }); // Scroll width of one card
+    }
+
+    function scrollLeftSides() {
+        const container = document.getElementById('scrollContainer');
+        container.scrollBy({ left: -350, behavior: 'smooth' }); // Scroll back one card
+    }
+</script>
+
 </body>
