@@ -641,3 +641,60 @@ h1, h2, h3, h4, h5, h6 {
         min-width: 85vw; /* Card takes up 85% of screen width */
     }
 }
+/* --- FIX BOOTSTRAP NAVBAR (Restore the Look) --- */
+
+/* 1. Fix the Logo Font */
+.navbar-brand.logo {
+    font-family: var(--heading-font) !important; /* Limelight */
+    font-size: 2rem !important; /* Make it big again */
+    color: #fff !important; /* Force White */
+}
+
+/* 2. Fix the Links (Make them White & Montserrat) */
+.navbar-nav .nav-link {
+    font-family: var(--body-font) !important; /* Montserrat */
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff !important; /* Start White */
+    padding: 0 15px !important; /* Space them out */
+    transition: color 0.3s ease;
+}
+
+/* 3. Hover Effect (Teal) */
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important; /* Teal on hover */
+}
+
+/* 4. Fix the "Book Appointment" Button in Nav */
+.navbar .custom-btn {
+    font-family: var(--body-font);
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 30px; /* Rounded pill shape */
+    
+    /* Make it look like your original button */
+    background-color: transparent !important; 
+    border: 2px solid #fff !important;
+    color: #fff !important;
+}
+
+.navbar .custom-btn:hover {
+    background-color: #fff !important;
+    color: var(--secondary-color) !important; /* Dark text on white hover */
+}
+
+/* 5. Mobile Menu Background (Keep this dark) */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: rgba(0,0,0,0.95); /* Deeply dark for mobile readability */
+        padding: 20px;
+        margin-top: 15px;
+        border-radius: 12px;
+    }
+    
+    /* Center text on mobile */
+    .navbar-nav {
+        text-align: center;
+        gap: 15px;
+    }
+}
