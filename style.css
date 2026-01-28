@@ -4,6 +4,43 @@
 /* Now fetching 'Limelight' and 'Montserrat' */
 @import url('https://fonts.googleapis.com/css2?family=Limelight&family=Montserrat:wght@300;400;500;600&display=swap');
 
+/* --- BOOTSTRAP OVERRIDES (The Protection Patch) --- */
+
+/* 1. Stop Bootstrap from messing up your Link Colors */
+a {
+    text-decoration: none !important; /* Removes underlines */
+}
+
+/* 2. Fix the Navbar conflicts */
+.navbar {
+    background-color: transparent !important; /* Stops grey background */
+    padding: 0 !important; /* Uses your padding, not Bootstrap's */
+    flex-wrap: nowrap !important; /* Stops it from stacking weirdly */
+}
+
+/* 3. Fix the Container Widths */
+/* Bootstrap forces containers to snap to widths. This keeps yours fluid/centered. */
+.container {
+    max-width: 1200px !important;
+}
+
+/* 4. Keep your Teal Buttons (Bootstrap tries to make them Blue) */
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+.btn-primary:hover {
+    background-color: #00b894 !important; /* A slightly darker teal for hover */
+    border-color: #00b894 !important;
+}
+
+/* 5. Fix List Styles (Bootstrap adds padding to UL/LI) */
+ul {
+    padding-left: 0 !important;
+    margin-bottom: 0 !important;
+}
 :root {
     /* 2. COLORS */
     /* I've put a standard Teal here. If the specific blue in Figma is different, 
