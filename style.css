@@ -591,3 +591,53 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
     .scroll-btn { display: none; }
 }
+/* --- MOBILE RESPONSIVENESS (The "Meh" Fixer) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Fix the "About Us" Puzzle */
+    .about-grid {
+        display: flex; /* Stop using Grid */
+        flex-direction: column; /* Stack them vertically */
+        gap: 40px;
+    }
+
+    .about-title {
+        font-size: 2.5rem; /* Smaller title */
+        margin-bottom: 30px;
+    }
+
+    /* Stack the "Our | Innovation | Values" rows */
+    .values-row-top, 
+    .values-row-bottom {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* Make the Big Words centered and smaller */
+    .big-word-left, .big-word-right, .big-word-center {
+        font-size: 2.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Fix Alignment of descriptions */
+    .text-right, .text-left {
+        text-align: center !important;
+    }
+    
+    .text-right p, .text-left p {
+        margin: 0 auto; /* Center the text block */
+    }
+
+    /* 2. Hide Scroll Arrows on Mobile (User can just swipe!) */
+    .scroll-btn {
+        display: none !important; 
+    }
+    
+    /* 3. Make the Service Cards width match the screen */
+    .service-card {
+        min-width: 85vw; /* Card takes up 85% of screen width */
+    }
+}
