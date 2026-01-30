@@ -171,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
     /* Updated Path: Since style.css is in the main folder, 
        we go directly into 'assets/images/' 
     */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/hero-bg.png');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/hero-new.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
