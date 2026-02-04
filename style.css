@@ -837,3 +837,48 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--secondary-color);
     background-color: rgba(0,0,0,0.02);
 }
+/* --- FAQ SECTION --- */
+.faq-section {
+    padding-bottom: 100px;
+    background-color: #f8f9fa; /* Matches Prices background */
+}
+
+.faq-section h2 {
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+
+/* Make the Questions look like Floating Pills */
+.accordion-item {
+    background: #fff;
+    border: none;
+    border-radius: 10px !important;
+    margin-bottom: 15px; /* Space between questions */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    overflow: hidden;
+}
+
+.accordion-button {
+    font-family: var(--body-font);
+    font-weight: 600;
+    color: #555;
+    padding: 20px 25px;
+    background-color: #fff;
+    box-shadow: none !important; /* No blue glow on click */
+}
+
+/* When the question is OPEN */
+.accordion-button:not(.collapsed) {
+    color: var(--secondary-color);
+    background-color: #fff; /* Keep white background */
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,0.05) !important; /* Subtle divider line */
+}
+
+.accordion-body {
+    font-family: var(--body-font);
+    color: #777;
+    line-height: 1.6;
+    padding: 20px 25px;
+}
