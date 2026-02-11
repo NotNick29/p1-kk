@@ -882,3 +882,63 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.6;
     padding: 20px 25px;
 }
+/* --- CONTACT & APPOINTMENT SECTION --- */
+.appointment-section {
+    padding: 80px 0;
+    background-color: #f8f9fa; /* Matches the rest of the site */
+}
+
+/* White Cards */
+.app-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Soft shadow */
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.form-title, .info-title {
+    font-family: var(--body-font);
+    font-weight: 400;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+/* Custom Input Fields */
+.custom-input {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.custom-input:focus {
+    border-color: var(--primary-color); /* Teal border on click */
+    box-shadow: 0 0 0 3px rgba(13, 202, 240, 0.1); /* Soft glow */
+}
+
+/* Info List Styling */
+.info-list {
+    list-style: none;
+    padding: 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.info-list li {
+    margin-bottom: 20px;
+}
+
+.hours-list {
+    list-style: disc inside;
+    line-height: 1.6;
+}
+
+/* Map Image */
+.map-img {
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
